@@ -1,4 +1,4 @@
 # ride_hailing_drl_v1
-Deep Reinforcement Learning applied on ride-hailing system. 
+Scalable Deep Reinforcement Learning applied on ride-hailing systems
 
-Originally from Mark's repo https://github.com/mark-gluzman/ride_hailing, further worked on it.
+Rewritten/Updated code from https://github.com/mark-gluzman/ride_hailing.
