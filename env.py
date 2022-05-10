@@ -6,8 +6,8 @@ class Env(object):
     """ The transportation network. """
     network_name = 'transportation_network' # Charlie 5/3/22 to make the code run
     R = 5  # number of regions
-    N = 10  # number of cars
-    H = 10  # horizon in minute (10 now for testing?)
+    N = 1000  # number of cars
+    H = 360 # horizon in minute (10 now for testing?)
     num_slots = 3
     len_slot = 120  # in minute
 

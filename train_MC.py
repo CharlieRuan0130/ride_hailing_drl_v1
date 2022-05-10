@@ -16,7 +16,7 @@ import warnings
 
 ray.init(temp_dir='/tmp/ray2') 
 
-MAX_ACTORS = 2  # max number of parallel simulations
+MAX_ACTORS = 10  # max number of parallel simulations
 
 def diag_dot(A, B):
     # returns np.diag(np.dot(A, B))
@@ -433,15 +433,15 @@ if __name__ == "__main__":
                                                   'using Proximal Policy Optimizer'))
 
     parser.add_argument('-n', '--num_policy_iterations', type=int, help='Number of policy iterations to run',
-                        default = 200)
+                        default = 75)
     parser.add_argument('-g', '--gamma', type=float, help='Discount factor',
                         default = 1)
     parser.add_argument('-l', '--lam', type=float, help='Lambda for Generalized Advantage Estimation',
                         default = 1)
     parser.add_argument('-k', '--kl_targ', type=float, help='D_KL target value',
-                        default = 0.003)
+                        default = 0.012)
     parser.add_argument('-b', '--batch_size', type=int, help='Number of episodes per training batch',
-                        default = 50) # K=300 in paper? (Charlie 5/3/22)
+                        default = 300) # K=300 in paper? (Charlie 5/3/22)
     parser.add_argument('-m', '--hid1_mult', type=int, help='Size of first hidden layer for value and policy NNs',
                         default = 10)
     parser.add_argument('-t', '--episode_duration', type=int, help='Number of time-steps per an episode',
